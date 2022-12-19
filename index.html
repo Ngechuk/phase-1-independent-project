@@ -1,19 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuck Norris Jokes</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
 <body>
-    <h1>Chuck Norris Jokes</h1>
-    <img src="chuck.jpg" alt="" srcset="" />
-
-    <div id="robbie" class="container">
-      <div class="btn-row">
-        <select id="joke-category" class="btn">
-          <option value="category 1" selected>category 1</option>
-          <option value="category 2">category 2</option>
-        </select>
-
-        <button id="joke-get" class="btn btn-get">Get Next Joke</button>
-      </div>
-
-      <div class="joke-container">
-        <p id="joke-text"></p>
-      </div>
+    <div class ="header-wrapper"> 
+        <h1 class= "header-banner">
+            Chuck.N Joke generator
+        </h1>
     </div>
-  </body>
+    <div class="body-wrapper">
+        <img src="chuck.jpg" alt="Chuck Norris The Legend">
+        <div class="body-joke-area" id="body-joke-area"></div>
+        <div class="body-button-wrapper"> 
+            <button class="body-joke-button" id="joke-button">Get Joke</button>
+        </div>
+        <div class="body-radio-wrapper" id="body-radio-wrapper"></div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

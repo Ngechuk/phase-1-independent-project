@@ -24,3 +24,36 @@ const loadCategories = async () => {
 
     // Clear out the old
   [...dropDown.options].map((e) => e.remove());
+  // Place the all category
+  let item = document.createElement("option");
+  item.innerHTML = `<option class='items' value="all">All</option>`;
+  dropDown.options.add(item);
+  // Add in the specified categories
+  for (let i = 0; i < respJson.length; i++) {
+    let item = document.createElement("option");
+    item.innerHTML = `<option class='items' value="${respJson[i]}">${respJson[i]}</option>`;
+    dropDown.options.add(item);
+  }
+
+  dropDown.selectedIndex = 0;
+   // call up the first joke
+   getNextJoke("dummy");
+};
+
+loadCategories();
+
+const getNextJoke = async (e) => {
+  debugger;
+ // get the category
+ let dropDown = document.querySelector("#joke-category");
+ let num = dropDown.selectedIndex;
+ let value = [...dropDown.options][num].value;
+
+ if (num == 0) {
+   respJson = await getJson(`${chuckAll}`);
+ } else {
+   respJson = await getJson(`${chuckJokes}${value}`);
+ }
+
+ jokeText.innerText = respJson.value;
+};

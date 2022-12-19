@@ -32,4 +32,38 @@ body {
     align-items: center;
     justify-content: center;
   }
+
+.btn {
+    background: yellow;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px 12px;
+    margin: 20px 20px;
+    border-width: 2px;
+    border-style: outset;
+    cursor: pointer;
+  }
   
+  .btn-get {
+    background: navy;
+    color: white;
+  }
+  
+  .btn-row {
+    display: flex;
+  }
+  
+  .joke-container {
+    height: 30vh;
+  }
+  
+  p {
+    background-color: white;
+    border-radius: 5px;
+    margin: 0;
+    padding: 5px 10px;
+    box-shadow: 2px 2px 2px grey;
+    width: 300px;
+  }

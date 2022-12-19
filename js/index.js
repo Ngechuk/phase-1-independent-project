@@ -10,3 +10,17 @@ const chuckJokes = "https://api.chucknorris.io/jokes/random?category=";
 
 // // const chuckJokes = 'https://api.chucknorris.io/jokes/random?category={category}'
 
+const getJson = async (url) => {
+    const resp = await fetch(url);
+    const respJson = await resp.json();
+    return respJson;
+  };
+  // Get categories
+const loadCategories = async () => {
+    respJson = await getJson(chuckCategories);
+  
+    let dropDown = document.querySelector("#joke-category");
+    dropDown.options.innerHTML = "";
+
+    // Clear out the old
+  [...dropDown.options].map((e) => e.remove());

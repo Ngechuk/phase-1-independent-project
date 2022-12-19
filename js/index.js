@@ -1,25 +1,12 @@
 
 const button = document.getElementById("generate-joke");
-const loadCategories = async () => {
-    respJson = await getJson(chuckCategories);
-  
-    let dropDown = document.querySelector("#joke-category");
-    dropDown.options.innerHTML = "";
-  
+const jokeDiv = document.getElementById("joke");
+const jokeCategory = document.querySelector("#joke-category");
+const jokeText = document.querySelector("#joke-text");
+const btnGetJoke = document.querySelector("#joke-get");
+const chuckCategories = "https://api.chucknorris.io/jokes/categories";
+const chuckAll = "https://api.chucknorris.io/jokes/random";
+const chuckJokes = "https://api.chucknorris.io/jokes/random?category=";
 
-button.addEventListener("click", () => {
-  fetch("https://api.chucknorris.io/jokes/random")
-    .then(response => response.json())
-    .then(data => {
-      jokeDiv.innerHTML = data.value;
-      console.log(data.value);
-    });
-});
-fetch("https://api.chucknorris.io/jokes/search?query=chuck", {
-    method: "GET"
-  })
-    .then(response => response.json())
-    .then(data => {
-      console.log(data.result);
-    });
-  
+// // const chuckJokes = 'https://api.chucknorris.io/jokes/random?category={category}'
+

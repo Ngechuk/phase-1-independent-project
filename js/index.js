@@ -57,3 +57,8 @@ const getNextJoke = async (e) => {
 
  jokeText.innerText = respJson.value;
 };
+btnGetJoke.addEventListener("click", getNextJoke);
+jokeCategory.addEventListener("change", getNextJoke);
+
+// console.log(jokeText.innerText);
+// console.log(jokeCategory.value);

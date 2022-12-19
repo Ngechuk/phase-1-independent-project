@@ -16,6 +16,7 @@ body{
   color: aliceblue;
   padding: 10px;
   box-shadow: 1px 1px 10 px 1px rgb(12, 2, 2);
+  
 
 }
 .body-wrapper {
@@ -34,5 +35,34 @@ body{
   padding: 10px;
   margin: 0px 10px;
   border: 1px solid black;
-  
+  border-radius: 3px;
+  overflow-y: scroll;
+  max-height: 100px;
+  }
+  .body-button-wrapper{
+    margin-top: 50px;
+  }
+  .body-joke-button{
+    width: 100px;
+    padding: 10px;
+    font-size: 17px;
+    border-radius: 10px;
+    text-shadow: 0.5px 0.5px black;
+  }
+.body-radio-wrapper{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+.category-container{
+  margin: 15px 0px;
+  flex-grow: 1;
+  width: 33%;
+}
+.body-radio-wrapper{
+  width: 90%;
+}
+
+

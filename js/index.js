@@ -9,10 +9,10 @@ async function fetchJoke(currentCategory){
     const response = await fetch(
         `https://api.chucknorris.io/jokes/random?category=${currentCategory}`
     );
-    const data =await response.json();
+    const data = await response.json();
     return data.value;
 }
-let currentCategory= "dev"
+let currentCategory= "dev";
 // load onload
 window.onload= async function() {
     const bodyRadioWrapper= document.getElementById("body-radio-wrapper");
@@ -42,7 +42,6 @@ const jokeButton= document.getElementById("joke-button")
 jokeButton.addEventListener("click", async function(){
     const value = fetchJoke(currentCategory)
     const jokeText = document.getElementById("body-joke area")
-    jokeText =document.getElementById("body-joke-area")
     jokeText.innerHTML = ""
-    jokeText.innerHTML = value
-})
+    jokeText.innerHTML = value;
+});

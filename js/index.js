@@ -47,4 +47,7 @@ async function fetchCategories() {
     jokeText.innerHTML = ""
     jokeText.innerHTML = value
   })
+  const searchJoke = document.getElementById("joke-search")
+  jokesearch.addEventListener("click", async function(){
+  })
   
